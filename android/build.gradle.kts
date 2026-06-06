@@ -62,27 +62,27 @@ fun getRootProjectExtOrCoreProperty(
         ?: throw GradleException("Property '$name' not found.")
 }
 
+val projectCompileSdk = extra["compileSdk"] as Int
+val projectMinSdk = extra["minSdk"] as Int
+val projectJavaVersion = extra["javaVersion"] as JavaVersion
+
 android {
 
     namespace = "io.flutter.plugins.firebase.performance"
 
-    compileSdk =
-        extra["compileSdk"] as Int
+    compileSdk = projectCompileSdk
 
     defaultConfig {
-        minSdk =
-            extra["minSdk"] as Int
+        minSdk = projectMinSdk
 
         testInstrumentationRunner =
             "androidx.test.runner.AndroidJUnitRunner"
     }
 
     compileOptions {
-        sourceCompatibility =
-            extra["javaVersion"] as JavaVersion
+        sourceCompatibility = projectJavaVersion
 
-        targetCompatibility =
-            extra["javaVersion"] as JavaVersion
+        targetCompatibility = projectJavaVersion
     }
 
     sourceSets {
@@ -130,7 +130,7 @@ plugins.withId("org.jetbrains.kotlin.android") {
         compilerOptions {
             jvmTarget.set(
                 JvmTarget.fromTarget(
-                    (extra["javaVersion"] as JavaVersion).majorVersion
+                    projectJavaVersion.majorVersion
                 )
             )
         }
