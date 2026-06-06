@@ -1,0 +1,52 @@
+name: firebase_performance
+description:
+  Flutter plugin for Google Performance Monitoring for Firebase, an app
+  measurement solution that monitors traces and HTTP/S network requests on Android and
+  iOS.
+homepage: https://firebase.google.com/docs/perf-mon
+repository: https://github.com/firebase/flutterfire/tree/main/packages/firebase_performance/firebase_performance
+version: 0.11.4+2
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+topics:
+  - firebase
+  - performance
+  - monitoring
+  - insights
+
+false_secrets:
+  - example/**
+
+environment:
+  sdk: '^3.12.0'
+  flutter: '>=3.44.0'
+
+dependencies:
+  firebase_core:
+    git: https://github.com/kumsumit/firebase_core.git
+  firebase_core_platform_interface:
+    git: https://github.com/kumsumit/firebase_core_platform_interface.git
+  firebase_performance_platform_interface:
+    git: https://github.com/kumsumit/firebase_performance_platform_interface.git
+  firebase_performance_web:
+    git: https://github.com/kumsumit/firebase_performance_web.git
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  http: ^1.6.0
+  mockito: ^5.7.0
+  plugin_platform_interface: 
+    git: https://github.com/kumsumit/plugin_platform_interface.git
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: io.flutter.plugins.firebase.performance
+        pluginClass: FlutterFirebasePerformancePlugin
+      ios:
+        pluginClass: FirebasePerformancePlugin
+      web:
+        default_package: firebase_performance_web
