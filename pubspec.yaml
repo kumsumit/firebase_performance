@@ -5,8 +5,9 @@ description:
   iOS.
 homepage: https://firebase.google.com/docs/perf-mon
 repository: https://github.com/firebase/flutterfire/tree/main/packages/firebase_performance/firebase_performance
-version: 0.11.4+2
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 0.11.5
+publish_to: 'none'
+
 topics:
   - firebase
   - performance
@@ -17,8 +18,8 @@ false_secrets:
   - example/**
 
 environment:
-  sdk: '^3.12.0'
-  flutter: '>=3.44.0'
+  sdk: '^3.13.0'
+  flutter: '>=3.47.0'
 
 dependencies:
   firebase_core:

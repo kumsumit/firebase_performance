@@ -14,7 +14,8 @@
       ],
       "devDependencies": [
         "flutter_test",
-        "integration_test"
+        "integration_test",
+        "test_api"
       ]
     },
     {
@@ -44,6 +45,21 @@
         "stream_channel",
         "test_api",
         "vector_math"
+      ]
+    },
+    {
+      "name": "test_api",
+      "version": "0.7.12",
+      "dependencies": [
+        "async",
+        "boolean_selector",
+        "collection",
+        "meta",
+        "source_span",
+        "stack_trace",
+        "stream_channel",
+        "string_scanner",
+        "term_glyph"
       ]
     },
     {
@@ -90,11 +106,6 @@
       ]
     },
     {
-      "name": "vm_service",
-      "version": "15.2.0",
-      "dependencies": []
-    },
-    {
       "name": "path",
       "version": "1.9.1",
       "dependencies": []
@@ -122,14 +133,15 @@
       ]
     },
     {
-      "name": "meta",
-      "version": "1.18.3",
-      "dependencies": []
-    },
-    {
-      "name": "collection",
-      "version": "1.19.1",
-      "dependencies": []
+      "name": "matcher",
+      "version": "0.12.20",
+      "dependencies": [
+        "async",
+        "meta",
+        "stack_trace",
+        "term_glyph",
+        "test_api"
+      ]
     },
     {
       "name": "leak_tracker_flutter_testing",
@@ -143,23 +155,6 @@
       ]
     },
     {
-      "name": "vector_math",
-      "version": "2.4.0",
-      "dependencies": []
-    },
-    {
-      "name": "stack_trace",
-      "version": "1.12.1",
-      "dependencies": [
-        "path"
-      ]
-    },
-    {
-      "name": "clock",
-      "version": "1.1.2",
-      "dependencies": []
-    },
-    {
       "name": "fake_async",
       "version": "1.3.3",
       "dependencies": [
@@ -168,53 +163,9 @@
       ]
     },
     {
-      "name": "matcher",
-      "version": "0.12.20",
-      "dependencies": [
-        "async",
-        "meta",
-        "stack_trace",
-        "term_glyph",
-        "test_api"
-      ]
-    },
-    {
-      "name": "test_api",
-      "version": "0.7.12",
-      "dependencies": [
-        "async",
-        "boolean_selector",
-        "collection",
-        "meta",
-        "source_span",
-        "stack_trace",
-        "stream_channel",
-        "string_scanner",
-        "term_glyph"
-      ]
-    },
-    {
-      "name": "web",
-      "version": "1.1.1",
+      "name": "collection",
+      "version": "1.19.1",
       "dependencies": []
-    },
-    {
-      "name": "http_parser",
-      "version": "4.1.2",
-      "dependencies": [
-        "collection",
-        "source_span",
-        "string_scanner",
-        "typed_data"
-      ]
-    },
-    {
-      "name": "async",
-      "version": "2.13.1",
-      "dependencies": [
-        "collection",
-        "meta"
-      ]
     },
     {
       "name": "sky_engine",
@@ -235,34 +186,38 @@
     },
     {
       "name": "firebase_performance_web",
-      "version": "0.1.8+8",
+      "version": "0.1.8+13",
       "dependencies": [
-        "_flutterfire_internals",
         "firebase_core",
         "firebase_core_web",
         "firebase_performance_platform_interface",
         "flutter",
-        "flutter_web_plugins"
+        "flutter_web_plugins",
+        "flutterfire_internals"
       ]
     },
     {
       "name": "firebase_performance_platform_interface",
-      "version": "0.2.0+2",
+      "version": "0.2.0+7",
       "dependencies": [
-        "_flutterfire_internals",
         "firebase_core",
         "flutter",
+        "flutterfire_internals",
         "meta",
         "plugin_platform_interface"
       ]
     },
     {
+      "name": "meta",
+      "version": "1.19.0",
+      "dependencies": []
+    },
+    {
       "name": "firebase_core_platform_interface",
-      "version": "7.0.1",
+      "version": "8.1.1",
       "dependencies": [
         "collection",
         "flutter",
-        "flutter_test",
         "meta",
         "plugin_platform_interface"
       ]
@@ -279,14 +234,9 @@
       ]
     },
     {
-      "name": "webdriver",
-      "version": "3.1.0",
-      "dependencies": [
-        "matcher",
-        "path",
-        "stack_trace",
-        "sync_http"
-      ]
+      "name": "web",
+      "version": "1.1.1",
+      "dependencies": []
     },
     {
       "name": "fuchsia_remote_debug_protocol",
@@ -298,12 +248,42 @@
       ]
     },
     {
-      "name": "file",
-      "version": "7.0.1",
+      "name": "flutterfire_internals",
+      "version": "1.3.77",
       "dependencies": [
+        "collection",
+        "firebase_core",
+        "firebase_core_platform_interface",
+        "flutter",
         "meta",
+        "stack_trace"
+      ]
+    },
+    {
+      "name": "flutter_web_plugins",
+      "version": "0.0.0",
+      "dependencies": [
+        "flutter"
+      ]
+    },
+    {
+      "name": "plugin_platform_interface",
+      "version": "2.1.8",
+      "dependencies": [
+        "meta"
+      ]
+    },
+    {
+      "name": "stack_trace",
+      "version": "1.12.2",
+      "dependencies": [
         "path"
       ]
+    },
+    {
+      "name": "clock",
+      "version": "1.1.3",
+      "dependencies": []
     },
     {
       "name": "leak_tracker_testing",
@@ -326,15 +306,53 @@
       ]
     },
     {
+      "name": "vector_math",
+      "version": "2.4.2",
+      "dependencies": []
+    },
+    {
       "name": "term_glyph",
       "version": "1.2.2",
       "dependencies": []
+    },
+    {
+      "name": "boolean_selector",
+      "version": "2.1.2",
+      "dependencies": [
+        "source_span",
+        "string_scanner"
+      ]
+    },
+    {
+      "name": "async",
+      "version": "2.13.1",
+      "dependencies": [
+        "collection",
+        "meta"
+      ]
     },
     {
       "name": "string_scanner",
       "version": "1.4.1",
       "dependencies": [
         "source_span"
+      ]
+    },
+    {
+      "name": "http_parser",
+      "version": "4.1.2",
+      "dependencies": [
+        "collection",
+        "source_span",
+        "string_scanner",
+        "typed_data"
+      ]
+    },
+    {
+      "name": "typed_data",
+      "version": "1.4.0",
+      "dependencies": [
+        "collection"
       ]
     },
     {
@@ -347,54 +365,13 @@
       ]
     },
     {
-      "name": "boolean_selector",
-      "version": "2.1.2",
-      "dependencies": [
-        "source_span",
-        "string_scanner"
-      ]
-    },
-    {
-      "name": "typed_data",
-      "version": "1.4.0",
-      "dependencies": [
-        "collection"
-      ]
-    },
-    {
-      "name": "flutter_web_plugins",
-      "version": "0.0.0",
-      "dependencies": [
-        "flutter"
-      ]
-    },
-    {
-      "name": "_flutterfire_internals",
-      "version": "1.3.72",
-      "dependencies": [
-        "collection",
-        "firebase_core",
-        "firebase_core_platform_interface",
-        "flutter",
-        "meta",
-        "stack_trace"
-      ]
-    },
-    {
-      "name": "plugin_platform_interface",
-      "version": "2.1.8",
-      "dependencies": [
-        "meta"
-      ]
-    },
-    {
-      "name": "sync_http",
-      "version": "0.3.1",
+      "name": "vm_service",
+      "version": "15.3.0",
       "dependencies": []
     },
     {
       "name": "process",
-      "version": "5.0.5",
+      "version": "5.0.6",
       "dependencies": [
         "file",
         "path",
@@ -402,8 +379,31 @@
       ]
     },
     {
+      "name": "file",
+      "version": "7.0.1",
+      "dependencies": [
+        "meta",
+        "path"
+      ]
+    },
+    {
       "name": "platform",
       "version": "3.1.6",
+      "dependencies": []
+    },
+    {
+      "name": "webdriver",
+      "version": "3.1.0",
+      "dependencies": [
+        "matcher",
+        "path",
+        "stack_trace",
+        "sync_http"
+      ]
+    },
+    {
+      "name": "sync_http",
+      "version": "0.3.1",
       "dependencies": []
     }
   ],
