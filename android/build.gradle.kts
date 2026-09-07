@@ -44,9 +44,10 @@ fun getRootProjectExtOrCoreProperty(
         ?: throw GradleException("Property '$name' not found")
 }
 
-val compileSdkValue: Int by extra
-val minSdkValue: Int by extra
-val javaVersion: JavaVersion by extra
+val compileSdkValue: extra["compileSdk"] as Int
+val minSdkValue: extra["minSdk"] as Int
+val targetSdk: extra["targetSdk"] as Int
+val javaVersion: extra["javaVersion"] as Int
 
 android {
     namespace = "io.flutter.plugins.firebase.performance"
